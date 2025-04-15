@@ -1,1 +1,1 @@
-bc
+grep "Failed password" /var/log/auth.log | awk '{print $11, $9}' | sort | uniq -c | sort -nr | head -n 5
